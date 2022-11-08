@@ -1,8 +1,18 @@
-import AppRouter from "./Router"
+import { useState } from "react";
 
-function App() {
+// import AppRouter from "./Router";
+import AppRouter from "components/Router";
+
+const App=()=>{
+
+  const [isLoggedIn, setIsLoggedIn]=useState(false);
+
   return (
-    <AppRouter />
+    <>
+      <AppRouter isLoggedIn={isLoggedIn} />
+      <footer>&copy; {new Date().getFullYear()} Nwitter</footer>
+    </>
+    
   );
 }
 
